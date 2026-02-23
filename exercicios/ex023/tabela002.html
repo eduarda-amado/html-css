@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,8 +20,32 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        /*Efeito zebrado
+        2n - para colocar de dois em dois
+        2n-1 - para colocar começar na primeira linha
+        odd - zebrado de ímpar em ímpar
+        even - zebrado de par em par
+        */
+
+        tbody >  tr:nth-child(2n-1) {
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
 
@@ -34,6 +59,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -42,10 +68,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
 
@@ -161,7 +188,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
