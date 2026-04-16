@@ -11,8 +11,17 @@
     </style>
 </head>
 <body>
+    <!--
+    Get: para dados públicos, buscas e URLs compartilháveis.
+    Post: para dados sensíveis, envios de arquivos ou formulários extensos.
+
+    Autocomplete="off": desativa oo preenchimento automático do navegador.
+    Action: indica para onde os dados devem ser enviado.
+    Label: garante acessibilidade, clareza e melhor experiência do usuário. 
+    Input: é usado dentro do label para criar uma ligação entre a caixa e o texto.
+    -->
     <h1>Meu primeiro formulário</h1>
-    <form action="cadastro.php" autocomplete="off">
+    <form action="cadastro.php" method="post" autocomplete="off">
         <p><label for="inome">Nome:</label> 
             <input type=" text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome: </label>
