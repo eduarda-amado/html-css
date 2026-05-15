@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+@media (max-width: 480px) {
+    main {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; /* faz o body ocupar a tela inteira. */
+    display: flex; /* peças organizáveis (ativa o flexbox) */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    
+    background-color: rgb(223, 98, 98);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background-color: white;
+    width: 90%; /* largura do card */
+    max-width: 510px;
+    padding: 40px; /* espaço interno */
+    border-radius: 12px; /* bordas arredondadas */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+h1::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: red;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: -10px;
+}
+
+input { 
+    width: 100%; /* o innput ocupa toda largura disponível */
+    padding: 12px; /* deixa confortável de digitar */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: red;
+}
+
+input[type="submit"] {
+    background-color: rgb(255, 73, 73);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: darkred;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
